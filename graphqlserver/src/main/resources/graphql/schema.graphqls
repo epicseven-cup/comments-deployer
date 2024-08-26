@@ -1,0 +1,25 @@
+type Query {
+    postById(id: ID): Post
+    commentById(id: ID): Comment
+    userById(id: ID): User
+}
+
+type Post {
+    id: ID
+    user: User
+    title: String
+    content: String
+    comments: [Comment]
+}
+
+type Comment {
+    id: ID
+    user: User
+    content: String
+    replies: [Comment]
+}
+
+type User {
+    id: ID
+    username: String
+}
