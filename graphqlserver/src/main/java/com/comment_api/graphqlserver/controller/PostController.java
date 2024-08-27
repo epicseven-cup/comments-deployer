@@ -9,7 +9,7 @@ import com.comment_api.graphqlserver.records.Comment;
 
 @Controller
 public class PostController {
-    
+
     @QueryMapping
     public List<Comment> commentById() {
         return null;
