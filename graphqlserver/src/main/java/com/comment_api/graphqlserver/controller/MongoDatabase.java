@@ -7,5 +7,4 @@ import com.mongodb.client.MongoClients;
 
 public class MongoDatabase {
     MongoOperations mongoOps = new MongoTemplate(MongoClients.create(), "database");
-    
 }

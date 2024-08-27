@@ -5,5 +5,9 @@ import java.util.ArrayList;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public record Comment (String id, User user, String content, ArrayList<Comment> replies) {
-}
+public record Comment (
+    String id,
+    String postId,
+    User user, 
+    String content 
+){}

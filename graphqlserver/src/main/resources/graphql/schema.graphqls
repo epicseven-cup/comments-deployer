@@ -5,18 +5,24 @@ type Query {
 }
 
 type Post {
-    id: ID
-    user: User
-    title: String
-    content: String
-    comments: [Comment]
+    id: ID!
+    user: User!
+    title: String!
+    content: String!
 }
 
 type Comment {
-    id: ID
-    user: User
-    content: String
-    replies: [Comment]
+    id: ID!
+    postId: ID!
+    user: User!
+    content: String!
+}
+
+type Replies {
+    id: ID!
+    parent: ID!
+    user: User!
+    content: String!
 }
 
 type User {
