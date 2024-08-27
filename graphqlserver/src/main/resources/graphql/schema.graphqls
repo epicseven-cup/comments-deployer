@@ -9,6 +9,7 @@ type Post {
     user: User!
     title: String!
     content: String!
+    like: Int!
 }
 
 type Comment {
@@ -16,13 +17,15 @@ type Comment {
     postId: ID!
     user: User!
     content: String!
+    like: Int!
 }
 
-type Replies {
+type Reply {
     id: ID!
     parent: ID!
     user: User!
     content: String!
+    like: Int!
 }
 
 type User {

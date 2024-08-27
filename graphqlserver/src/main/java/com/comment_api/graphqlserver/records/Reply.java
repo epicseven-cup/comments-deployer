@@ -1,6 +1,6 @@
 package com.comment_api.graphqlserver.controller.records;
 
-public record Replies (
+public record Reply (
     String id,
     String parentID,
     User user,
