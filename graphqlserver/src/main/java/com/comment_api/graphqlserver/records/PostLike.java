@@ -1,4 +1,4 @@
-package com.comment_api.graphqlserver.controller.records;
+package com.comment_api.graphqlserver.records;
 
 public record PostLike (
     String id,

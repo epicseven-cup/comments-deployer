@@ -1,9 +1,17 @@
 services:
-  mongodb:
+  mongo:
     image: 'mongo:latest'
     environment:
       - 'MONGO_INITDB_DATABASE=mydatabase'
-      - 'MONGO_INITDB_ROOT_PASSWORD=secret'
-      - 'MONGO_INITDB_ROOT_USERNAME=root'
+      # - 'MONGO_INITDB_ROOT_PASSWORD=secret'
+      # - 'MONGO_INITDB_ROOT_USERNAME=root'
     ports:
       - '27017'
+  comment_api:
+    build:
+      context: .
+    environment:
+      WAIT_HOSTS: mongo:27017
+      SPRING_DATA_MONGODB_URI: mongo://mongo:27017/mydatabase
+    ports:
+      - 8080:8080
